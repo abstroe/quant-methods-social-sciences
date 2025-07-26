@@ -24,6 +24,45 @@ An intensive **12-week study plan** combining **Python** and **R** to master sta
 
 ---
 
+## 👋 Onboarding for Students
+
+Welcome! Here's how to get started quickly and smoothly:
+
+1. **Set up your environment**
+   
+   Follow the [INSTALL.md](INSTALL.md) instructions or the quick setup in this README to install Python, R, and dependencies.
+
+2. **Launch JupyterLab**
+   
+   Activate the Python virtual environment and start JupyterLab:
+   
+   ```bash
+   source env/bin/activate
+   jupyter lab
+   ```
+
+3. **Explore Week-by-Week Notebooks**
+
+Go to the `notebooks/` folder. Open the folder for the current week (e.g., `week_01_intro`) and start working through the `.ipynb` notebooks.
+
+4. **Track Your Progress**
+
+```bash
+python check_progress.py
+```
+
+Run the progress report generator whenever you want to see your learning progress:
+
+5. **Use Additional Resources**
+- Refer to `docs/` for the syllabus and reading materials.
+
+- Use helper scripts like `organize_notebooks.py` as needed.
+6. **Ask for Help**
+
+If stuck, review this README first. The structure and instructions here cover most questions.
+
+---
+
 ## 📦 Installation
 
 Full installation instructions are in [INSTALL.md](INSTALL.md).
@@ -42,7 +81,6 @@ pip install -r requirements.txt
 
 # R packages
 Rscript manage_r_packages.R install
-
 ```
 
 ## ▶️ Usage
@@ -80,9 +118,9 @@ python check_progress.py
 
 Output: progress_report.html
 
+--- 
 
-
-### 📂 Folder Structure
+## 📂 Folder Structure
 
 ```bash
 quant-methods-social-sciences/
@@ -101,6 +139,8 @@ quant-methods-social-sciences/
 └── .gitignore
 ```
 
+--- 
+
 ## ✅ Notes
 
 - **Update R packages safely**:
@@ -109,16 +149,20 @@ quant-methods-social-sciences/
 Rscript manage_r_packages.R update
 ```
 
-(Interactive mode – choose which packages to update)
+    (Interactive mode – choose which packages to update)
 
-- **Optional utilities**:
+* **Optional utilities**:
 
-        -`organize_notebooks.py` – arrange notebooks by week
+    -  `organize_notebooks.py` – arrange notebooks by week
 
-        - `check_progress.py` – track completion status
+    - `check_progress.py` – track completion status
+
+--- 
 
 ## 📖 Documentation
 
 See:
-  - [INSTALL.md](INSTALL.md) — full installation guide
-  - `docs/` — syllabus and additional references
+
+- [INSTALL.md](INSTALL.md) — full installation guide
+
+- `docs/` — syllabus and additional references
