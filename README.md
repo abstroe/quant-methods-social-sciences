@@ -39,4 +39,5 @@ An intensive 12-week study plan combining Python and R for statistics, regressio
 
 ---
 
-For more details, see [INSTALL.md](docs/INSTALL.md).
+For more details, see [Installation Guide](INSTALL.md). 
+
