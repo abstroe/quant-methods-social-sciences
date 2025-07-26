@@ -5,6 +5,7 @@ An intensive **12-week program** blending **Python** and **R** for statistical a
 ---
 
 ## 🚀 What You'll Learn
+
 - Descriptive & Inferential Statistics
 - Linear & Logistic Regression
 - Bayesian Methods (`brms`, `rstan`)
@@ -16,7 +17,7 @@ An intensive **12-week program** blending **Python** and **R** for statistical a
 
 ## 📂 Repository Structure
 
-quant-methods-social-sciences/
+```quant-methods-social-sciences/
 ├── data/                 # Sample datasets
 ├── notebooks/            # Weekly Jupyter notebooks (Python + R)
 │   ├── week_01_intro/
@@ -29,12 +30,12 @@ quant-methods-social-sciences/
 ├── r_packages.txt        # R packages
 └── .gitignore
 
-
 ---
 
 ## ✅ Quick Start
 
 ### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/abstroe/quant-methods-social-sciences.git
 cd quant-methods-social-sciences
@@ -42,7 +43,7 @@ cd quant-methods-social-sciences
 
 ### 2. Set Up Python Environment
 
-```python3 -m venv env
+```python3
 source env/bin/activate
 pip install -r requirements.txt
 ```
@@ -59,7 +60,7 @@ Rscript scripts/manage_r_packages.R install
 
 ### Launch JupyterLab
 
-```source env/bin/activate
+```source
 source env/bin/activate
 jupyter lab
 ```
@@ -72,7 +73,7 @@ Open notebooks/week_01_intro/ to begin.
 
 Generate an HTML progress report:
 
-``` python scripts/check_progress.py 
+```python
 python scripts/check_progress.py
 ```
 
@@ -83,7 +84,7 @@ Output: progress_report.html (in /scripts)
 ## 📖 Documentation
 
 * [INSTALL.md](INSTALL.md) — detailed installation guide
-*  In docs/` — syllabus ([PDF](docs/quant_methods_social_sciences_syllabus.pdf)), lecture notes, and resources
+* In docs/` — syllabus ([PDF](docs/quant_methods_social_sciences_syllabus.pdf)), lecture notes, and resources
 
 ---
 
@@ -92,10 +93,9 @@ Output: progress_report.html (in /scripts)
 - Run scripts from the **project root**.
 - Use `make` for common tasks:
 
-```make setup         # Python environment
+```make
 make setup         # Python environment
 make setup-r       # R packages
 make syllabus-pdf  # Generate syllabus PDF
 make notes-pdf     # Generate all lecture notes PDFs
 ```
-
