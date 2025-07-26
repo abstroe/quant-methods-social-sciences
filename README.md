@@ -1,43 +1,124 @@
 # Quantitative Methods for Social Sciences
 
-An intensive 12-week study plan combining Python and R for statistics, regression, Bayesian methods, and causal inference.
-
-## How to Start
-
-    make setup
+An intensive **12-week study plan** combining **Python** and **R** to master statistical analysis, regression models, Bayesian methods, and causal inference. Designed for **social sciences researchers and data analysts**.
 
 ---
 
-## Repository Structure
+## ✅ Features
 
-- `data/` — sample datasets  
-- `notebooks/` — Jupyter notebooks (Python and R) for each week  
-- `scripts/` — helper Python scripts  
-- `capstone_project/` — final project notebook and related files  
-- `env/` — Python virtual environment (after setup)  
-- `docs/` — documentation and syllabus PDF  
-- `.devcontainer/` — VS Code devcontainer config for Docker  
-- `.github/workflows/` — GitHub Actions workflows  
+- **Hands-on Jupyter Notebooks** (Python + R)
 
----
+- Covers:
+  
+  - Descriptive & Inferential Statistics
+  
+  - Linear & Logistic Regression
+  
+  - Bayesian Modeling (with `brms`)
+  
+  - Matching & Causal Inference
 
-## Setup Instructions
+- **Interactive Exercises**
 
-- Install Python 3.8+ and R (if not installed).  
-- Run:
-
-    make setup         # Python environment and packages
-    make setup-r       # R packages
-
-- To generate the syllabus PDF:
-
-    make syllabus-pdf
-
-- To update Colab badges in README:
-
-    make update-colab-badges
+- **Capstone Project** with real-world datasets
 
 ---
 
-For more details, see [Installation Guide](INSTALL.md). 
+## 📦 Installation
 
+Full installation instructions are in [INSTALL.md](INSTALL.md).
+
+Quick setup:
+
+```bash
+# Clone the repository
+git clone https://github.com/abstroe/quant-methods-social-sciences.git
+cd quant-methods-social-sciences
+
+# Python setup
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+
+# R packages
+Rscript manage_r_packages.R install
+
+```
+
+## ▶️ Usage
+
+### 1. Start JupyterLab
+
+```bash
+source env/bin/activate
+jupyter lab
+```
+
+### 2. Explore Notebooks
+
+- Navigate to the `notebooks/` folder.
+
+- Each week has its own directory:
+  
+  - `week_01_intro/`
+  
+  - `week_02_regression/`
+  
+  - `week_03_bayes/`
+  
+  - …
+
+- Open and run the `.ipynb` files.
+
+### 3. Check Progress
+
+Generate a visual progress report:
+
+```bash
+python check_progress.py
+```
+
+Output: progress_report.html
+
+
+
+### 📂 Folder Structure
+
+```bash
+quant-methods-social-sciences/
+├── data/                 # Sample datasets
+├── notebooks/            # Weekly Jupyter notebooks (Python + R)
+│   ├── week_01_intro/
+│   ├── week_02_regression/
+│   └── ...
+├── scripts/              # Helper Python scripts
+├── capstone_project/     # Final project notebook & files
+├── docs/                 # Documentation (syllabus, INSTALL.md)
+├── manage_r_packages.R   # R package manager script
+├── r_packages.txt        # List of required R packages
+├── requirements.txt      # Python dependencies
+├── progress_report.html  # Generated progress report
+└── .gitignore
+```
+
+## ✅ Notes
+
+- **Update R packages safely**:
+
+```bash
+Rscript manage_r_packages.R update
+```
+
+(Interactive mode – choose which packages to update)
+
+- **Optional utilities**:
+
+        -`organize_notebooks.py` – arrange notebooks by week
+
+        - `check_progress.py` – track completion status
+
+## 📖 Documentation
+
+See:
+  - [INSTALL.md](INSTALL.md) — full installation guide
+  - `docs/` — syllabus and additional references
