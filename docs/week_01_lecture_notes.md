@@ -7,7 +7,12 @@
 Welcome to **Quantitative Methods for Social Sciences**!  
 In this course, you will learn to apply powerful computational tools—**Python** and **R**—to perform statistical analysis tailored for social science research.
 
-Our focus will be on real-world data analysis skills, covering descriptive and inferential statistics, regression models, Bayesian methods, and causal inference.
+Our focus will be on real-world data analysis skills, covering:
+
+- Descriptive and inferential statistics
+- Regression models
+- Bayesian methods
+- Causal inference
 
 ---
 
@@ -19,39 +24,33 @@ You will interact with Python mostly via **Jupyter notebooks**, where code and e
 ### Python Data Types and Variables
 
 ```python
-### Numbers
-
+# Numbers
 age = 30
 height = 1.75  # meters
 
-### Strings
-
+# Strings
 name = "Alice"
 
-### Boolean
-
+# Boolean
 is_student = True
 
-### List (ordered collection)
-
+# List (ordered collection)
 scores = [85, 90, 78]
 
 print(f"{name} is {age} years old.")
+```
 
-## Jupyter Notebook Basics
+### Jupyter Notebook Basics
 
-    Code cells: Run Python code
-
-    Markdown cells: Write formatted text
-
-    Run a cell with Shift + Enter
+- **Code cells**: Run Python code
+- **Markdown cells**: Write formatted text
+- Run a cell with `Shift + Enter`
 
 --- 
 
 ## 3. Introduction to R Basics
 
-R is a specialized language for statistics and data visualization,
-with rich libraries for social science applications.
+R is a specialized language for statistics and data visualization, with rich libraries for social science applications.
 
 ### Basic R Syntax
 
@@ -70,7 +69,7 @@ print(paste("The first person is", names[1], "and is", ages[1], "years old."))
 
 ### R in Jupyter
 
-You can also run R inside Jupyter notebooks using the IRKernel.
+You can run R inside Jupyter notebooks using the IRKernel.
 
 ---
 
@@ -81,17 +80,13 @@ Descriptive statistics summarize and describe key features of data.
 ### Measures of Central Tendency
 
 - **Mean** (average)
-
 - **Median** (middle value)
-
 - **Mode** (most frequent value)
 
 ### Measures of Variability
 
 - **Variance**: average squared deviation from the mean
-
 - **Standard Deviation**: square root of variance (in original units)
-
 - **Interquartile Range (IQR)**: range between 25th and 75th percentile
 
 ### Python Example (using `pandas`)
@@ -120,31 +115,30 @@ sd(data)
 
 ## 5. Data Loading and Exploration
 
-Understanding your dataset is crucial before analysis.
-
 ### Loading Data
 
-- Python (`pandas`):
+Python (`pandas`):
 
 ```python
 import pandas as pd
-
 df = pd.read_csv('data/sample_data.csv')
 print(df.head())
 ```
 
-- R:
+R:
 
 ```r
-df <- read.csv('data/sample_data.csv')y
+df <- read.csv('data/sample_data.csv')
 head(df)
 ```
 
 ### Exploring Data
 
-- Check data types, missing values
+Check:
 
-- Summarize variables
+- Data types
+- Missing values
+- Variable summaries
 
 Python:
 
@@ -164,8 +158,6 @@ summary(df)
 
 ## 6. Visualizing Data
 
-Basic plots help understand distribution and spot outliers.
-
 ### Python (using `matplotlib` and `seaborn`)
 
 ```python
@@ -176,7 +168,7 @@ sns.histplot(df['variable'])
 plt.show()
 ```
 
-R (using base plot or `ggplot2`)
+### R (using base plot or `ggplot2`)
 
 ```r
 hist(df$variable)
@@ -190,25 +182,23 @@ ggplot(df, aes(x = variable)) + geom_histogram()
 
 ## 7. Summary and Next Steps
 
-- We covered core concepts in Python and R.
+Today we covered:
 
-- Practiced descriptive statistics and basic data loading.
+- Core concepts in Python and R
+- Descriptive statistics
+- Basic data loading
 
-- Next week: dive deeper into data wrangling and visualization.
+**Next week**: Data wrangling and visualization
 
 ---
 
 ## References and Further Reading
 
-- *Python for Data Analysis*, Wes McKinney
-
-- *R for Data Science*, Hadley Wickham & Garrett Grolemund
-
-- *OpenIntro Statistics*, Diez et al. (free textbook)
-
-- pandas documentation
-
-- CRAN R Project
+- *Python for Data Analysis*, Wes McKinney  
+- *R for Data Science*, Hadley Wickham & Garrett Grolemund  
+- *OpenIntro Statistics*, Diez et al.  
+- [pandas documentation](https://pandas.pydata.org/docs/)  
+- [CRAN R Project](https://cran.r-project.org/)  
 
 ---
 
