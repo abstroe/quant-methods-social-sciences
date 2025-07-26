@@ -30,6 +30,9 @@ An intensive **12-week program** blending **Python** and **R** for statistical a
 ├── r_packages.txt        # R packages
 └── .gitignore
 
+
+```
+
 ---
 
 ## ✅ Quick Start
@@ -40,6 +43,8 @@ An intensive **12-week program** blending **Python** and **R** for statistical a
 git clone https://github.com/abstroe/quant-methods-social-sciences.git
 cd quant-methods-social-sciences
 ```
+
+
 
 ### 2. Set Up Python Environment
 
