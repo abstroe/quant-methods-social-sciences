@@ -165,4 +165,4 @@ See:
 
 - [INSTALL.md](INSTALL.md) — full installation guide
 
-- `docs/` — syllabus and additional references
+- `docs/` — detailed syllabus ([Markdown](docs/syllabus.md) and [PDF](docs/quant_methods_social_sciences_syllabus.pdf)) and supplementary reading materials.
