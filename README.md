@@ -16,18 +16,19 @@ An intensive **12-week program** blending **Python** and **R** for statistical a
 
 ## 📂 Repository Structure
 
-`quant-methods-social-sciences/
-├── data/ # Sample datasets
-├── notebooks/ # Weekly notebooks (Python + R)
-│ ├── week_01_intro/
-│ ├── week_02_regression/
-│ └── ...
-├── scripts/ # Utility scripts for setup & progress tracking
-├── capstone_project/ # Final project files
-├── docs/ # Syllabus & lecture notes
-├── requirements.txt # Python dependencies
-├── r_packages.txt # R packages
-└── .gitignore`
+quant-methods-social-sciences/
+├── data/                 # Sample datasets
+├── notebooks/            # Weekly Jupyter notebooks (Python + R)
+│   ├── week_01_intro/
+│   ├── week_02_regression/
+│   └── ...
+├── scripts/              # Utility scripts for setup & progress tracking
+├── capstone_project/     # Final project files
+├── docs/                 # Syllabus & lecture notes
+├── requirements.txt      # Python dependencies
+├── r_packages.txt        # R packages
+└── .gitignore
+
 
 ---
 
