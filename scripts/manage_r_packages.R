@@ -38,7 +38,7 @@ install_missing <- function(pkgs) {
   for (pkg in pkgs) {
     if (!requireNamespace(pkg, quietly = TRUE)) {
       message("Installing ", pkg, "...")
-      install.packages(pkg, dependencies = TRUE)
+      install.packages(pkg, dependencies = TRUE, repos = "https://cloud.r-project.org")
       updated <<- c(updated, pkg)
     } else {
       message("Package '", pkg, "' already installed.")
@@ -69,12 +69,12 @@ update_packages <- function(pkgs, force = FALSE) {
     if (!ok) {
       if (force) {
         message("⚠ Updating broken package: ", pkg)
-        install.packages(pkg, dependencies = TRUE)
+        install.packages(pkg, dependencies = TRUE, repos = "https://cloud.r-project.org")
         updated <<- c(updated, pkg)
       } else {
         ans <- readline(paste0("Package ", pkg, " is broken. Update now? [y/N]: "))
         if (tolower(ans) == "y") {
-          install.packages(pkg, dependencies = TRUE)
+          install.packages(pkg, dependencies = TRUE, repos = "https://cloud.r-project.org")
           updated <<- c(updated, pkg)
         } else {
           message("Skipped ", pkg)

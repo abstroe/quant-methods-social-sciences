@@ -85,9 +85,8 @@ def generate_html_report(progress, output_path='progress_report.html'):
     print(f"HTML progress report saved to {output_path}")
     abs_path = os.path.abspath(output_path)
     webbrowser.open(f'file://{abs_path}')
-
 def main():
-    base_dir = 'notebooks'  # adjust if your notebooks folder is different
+    base_dir = '../notebooks'  # relative to /scripts folder
     progress = {}
 
     for week_folder in sorted(os.listdir(base_dir)):

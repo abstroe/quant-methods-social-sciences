@@ -2,10 +2,6 @@ import os
 from pathlib import Path
 import json
 
-# Config
-USERNAME = "abstroe"
-REPO = "quant-methods-social-sciences"
-
 # Folders to create
 folders = [
     "data", "docs", "env", "notebooks", "scripts", "results",
@@ -14,7 +10,8 @@ folders = [
 
 # Files and their content
 files_content = {
-    ".gitignore": """__pycache__/
+    ".gitignore": """# Python
+__pycache__/
 *.pyc
 .ipynb_checkpoints
 env/
@@ -27,7 +24,7 @@ Thumbs.db
 results/
 """,
 
-    "README.md": f"""# Quantitative Methods for Social Sciences
+    "README.md": """# Quantitative Methods for Social Sciences
 
 An intensive 12-week study plan combining Python and R for statistics, regression, Bayesian methods, and causal inference.
 
@@ -68,7 +65,7 @@ An intensive 12-week study plan combining Python and R for statistics, regressio
 
 ---
 
-For more details, see [INSTALL.md](docs/INSTALL.md).
+For more details, see [INSTALL.md](INSTALL.md).
 """,
 
     "Makefile": """setup:
@@ -78,7 +75,7 @@ setup-r:
 \tRscript -e '.libPaths("~/R/libs"); dir.create("~/R/libs", showWarnings=FALSE, recursive=TRUE); install.packages(setdiff(readLines("r_packages.txt"), installed.packages()[,"Package"]), repos="https://cloud.r-project.org")'
 
 syllabus-pdf:
-\tpandoc docs/syllabus.md -o docs/syllabus.pdf --toc --standalone
+\tpandoc docs/syllabus.md -o docs/quant_methods_social_sciences_syllabus.pdf --toc --standalone
 
 update-colab-badges:
 \tpython scripts/generate_colab_links.py --username abstroe --repo quant-methods-social-sciences
@@ -105,15 +102,15 @@ rvest
 """,
 }
 
-# Create folders
+# ✅ Create folders
 for folder in folders:
     Path(folder).mkdir(parents=True, exist_ok=True)
 
-# Write files
+# ✅ Write files
 for filename, content in files_content.items():
     Path(filename).write_text(content.strip() + "\n")
 
-# Function to create a minimal Python notebook template
+# ✅ Function to create a minimal Python notebook template
 def create_python_notebook(title, tasks):
     nb = {
         "cells": [
@@ -148,13 +145,14 @@ def create_python_notebook(title, tasks):
     }
     return nb
 
-# Create starter notebooks for Week 1 Python and save
+# ✅ Create starter notebook for Week 1 (Python)
 week1_tasks = ["Descriptive Statistics", "Data Loading", "Basic Visualization"]
-week1_py_nb = create_python_notebook("Week 1 - Python", week1_tasks)
-with open("notebooks/week01_python.ipynb", "w") as f:
+week1_py_nb = create_python_notebook("Week 01 - Python", week1_tasks)
+Path("notebooks/week_01_intro").mkdir(parents=True, exist_ok=True)
+with open("notebooks/week_01_intro/intro_python.ipynb", "w") as f:
     json.dump(week1_py_nb, f, indent=2)
 
-print("Project structure created successfully!")
+print("✅ Project structure created successfully!")
 print("Folders, key files, and starter notebooks are ready.")
 print("Run 'make setup' to initialize Python environment and install packages.")
 print("Run 'make setup-r' to install R packages.")
