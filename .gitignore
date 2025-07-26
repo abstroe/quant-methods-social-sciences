@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.env
+env/
+venv/
+.venv/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+.Ruserdata
+.Rprofile
+
+# Jupyter
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build/Artifacts
+build/
+arrow/
+*.html
